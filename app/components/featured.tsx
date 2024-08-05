@@ -26,8 +26,7 @@ const variants = {
       hidden: {
         opacity: 0,
         transition: {
-        ease:'easeInOut',duration:0.25,
-          when: "afterChildren",
+        ease:'easeInOut',duration:0.25
         },
       },
   }
