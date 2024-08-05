@@ -49,7 +49,7 @@ export default async function Featured(){
     animate="visible" variants={list}>
                 {data.map((single,i)=>(
 
-                 <motion.div variants={item} >
+                 <motion.div key={`i-feat-mo`} variants={item}>
                       <Link  key={`i-feat`}className="w-1/4" href={`/projects/${single.slug.current}`} >
                            <div className="w-full" >
                                 <div className="w-full"
