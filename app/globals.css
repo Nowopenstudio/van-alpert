@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: 'mono';
+	src: url('/fonts/mono.woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+body{
+    font-family: 'mono','Courier New', Courier, monospace;
+    font-size: 9pt;
+}

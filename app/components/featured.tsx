@@ -1,6 +1,6 @@
 'use client'
+
 import Link from "next/link"
-import { urlFor, getData } from "../lib/sanity";
 import Image from 'next/image';
 import { motion } from "framer-motion";
 
@@ -39,21 +39,21 @@ const variants = {
   
   
 
-export default async function Featured(){
-    const {data} = await getData(`*[_type=='projects']{title,artist,slug,"imageUrl": cover.asset->url}`)
+export default function Featured({feat}:any){
+  
     return(
-        <article className="w-full relative mx-auto px-10 uppercase mt-10">
+        <article className="w-[100vw] relative mx-auto px-10 uppercase mt-10">
            <h1 className="w-full mb-10">Selected Works</h1>
-           <motion.div className="w-full flex items-start" initial="hidden"
+           <motion.div className="w-full flex flex-wrap items-start" initial="hidden"
     animate="visible" variants={list}>
-                {data.map((single,i)=>(
+                {feat.map((single,i)=>(
 
-                 <motion.div key={`i-feat-mo`} variants={item}>
-                      <Link  key={`i-feat`}className="w-1/4" href={`/projects/${single.slug.current}`} >
+                 <motion.div key={`${i}-feat-mo`} className="w-full sm:w-1/2 lg:w-1/3 relative" variants={item}>
+                      <Link  key={`${i}-feat`} className="w-full" href={`/projects/${single.slug.current}`} >
                            <div className="w-full" >
                                 <div className="w-full"
                                 >
-                                    <Image alt="image" src={single.imageUrl} width={1080} height={1080} className="object-cover"/>
+                                   <Image alt="image" height={0}  width={0} sizes="100vw"  src={single.imageUrl}  className="w-full object-fill "/>
                                 </div>
                                 <div className="w-full flex items-start justify-start">
                                     <div className='w-1/4'>

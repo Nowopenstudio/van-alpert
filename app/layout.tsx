@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
-import {getData} from "./lib/sanity";
-
-const inter = Inter({ subsets: ["latin"] });
+import {getData} from "./lib/util/sanity";
 
 
 export const metadata: Metadata = {
@@ -21,7 +18,7 @@ export default async function RootLayout({
   let {data} = await getData(`*[_type=='info']`)
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
       <Navbar info={data[0]}/>
         {children}
         </body>

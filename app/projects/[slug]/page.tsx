@@ -1,4 +1,4 @@
-import { getData } from "@/app/lib/sanity"
+import { getData } from '@/app/lib/util/sanity';
 import Image from 'next/image';
 
 export default async function ProjectPage({params}:{params:{slug:string}}){
