@@ -13,3 +13,8 @@ body{
     font-family: 'mono','Courier New', Courier, monospace;
     font-size: 9pt;
 }
+
+mux-player {
+	/* Hide all controls at once */
+	--controls: none;
+  }

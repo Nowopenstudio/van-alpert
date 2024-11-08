@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from 'next/image';
 import { motion } from "framer-motion";
+import { MuxVideoBG } from "../lib/util/muxVideo";
 
 const variants = {
     visible: i => ({
@@ -53,14 +54,14 @@ export default function Featured({feat}:any){
                            <div className="w-full" >
                                 <div className="w-full"
                                 >
-                                   <Image alt="image" height={0}  width={0} sizes="100vw"  src={single.imageUrl}  className="w-full object-fill "/>
+                                  <MuxVideoBG playbackId={single.vidCover.asset.playbackId} title={single.title}/>
                                 </div>
-                                <div className="w-full flex items-start justify-start">
+                                <div className="w-full flex items-start justify-start h-[100px] py-[10px] ">
                                     <div className='w-1/4'>
                                         <p>{}</p>
         
                                     </div>
-                                    <div className="w-3/4">
+                                    <div className="w-3/4 uppercase">
                                         <p>{single.title}</p>
                                         <p>{single.artist}</p>
                                     </div>

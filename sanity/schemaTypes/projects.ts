@@ -55,6 +55,11 @@ export default {
                         of:[{
                             type:'block'
                         }]
+                    },
+                    {
+                        type:'mux.video',
+                        name:'video',
+                        title:"Video"
                     }
             ]
             }]
@@ -64,6 +69,11 @@ export default {
             name:"cover",
             title:'Cover'
 
+        },
+        {
+            type:'mux.video',
+            name:'vidCover',
+            title:"Video Cover"
         }
 
     ]

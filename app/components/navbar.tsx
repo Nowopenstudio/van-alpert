@@ -13,8 +13,8 @@ export default function Navbar({ info }){
                         <div><Link href="/about" className="navItem w-full"> about</Link></div>
                   </div>
                 <div className="w-1/2">
-                   <div> <Link href="/" className="navItem w-full"> instagram</Link></div>
-                   <div> <Link href="/" className="navItem w-full"> Email</Link></div>
+                   <div> <a href="https://www.instagram.com/van_alpert/" className="navItem w-full"> instagram</a></div>
+                   <div> <a href={`mailto:${info.email}`} className="navItem w-full"> Email</a></div>
                 </div>
             </div>
         </nav>
