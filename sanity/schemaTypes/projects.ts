@@ -30,39 +30,27 @@ export default {
             to:[{type:'categories'}]
         },
         {
-            type:'array',
-            name:'content',
-            title: 'content',
-            of:[{
-                type:'object',
-                name:'sections',
-                title:'Sections',
-                fields:[
-                    {
-                        type:'string',
-                        name:'vidId',
-                        title:"Video ID"
-                    },
-                    {
-                        type:"image",
-                        name:"cover",
-                        title:'Cover'
+            type:'object',
+            name:'work',
+            title:'Video',
+            fields:[
+                {
+                    type:'string',
+                    name:'vidId',
+                    title:"Video ID"
+                },
+                {
+                    type:"image",
+                    name:"cover",
+                    title:'Cover'
 
-                    },
-                    {
-                        type:'array',
-                        name:'content',
-                        of:[{
-                            type:'block'
-                        }]
-                    },
-                    {
-                        type:'mux.video',
-                        name:'video',
-                        title:"Video"
-                    }
-            ]
-            }]
+                },
+                {
+                    type:'mux.video',
+                    name:'video',
+                    title:"Video"
+                }
+        ]
         },
         {
             type:"image",

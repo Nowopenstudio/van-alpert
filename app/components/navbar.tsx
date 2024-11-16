@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Navbar({ info }){
     return(
-        <nav className="w-full relative flex justify-between mx-auto px-10 uppercase py-5 items-start">
+        <nav className="w-full relative flex justify-between mx-auto px-[20px] uppercase py-5 items-start">
             <div className="relative flex items-start">
                 <Link href="/" className="font-nav mr-5">{info.title}</Link>
                 <p className="font-nav">{info.desc}</p>
