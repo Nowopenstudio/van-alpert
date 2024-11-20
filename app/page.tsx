@@ -10,6 +10,7 @@ export default async function Home() {
   const query = await getData(`{
     'feat':*[_type=='feature']{featProjects[]->{title,artist,slug,"imageUrl": cover.asset->url, vidCover{asset->{playbackId}}, category->{abbr}
   }}}`)
+  
     const {feat} = query.data  
 
   return (
