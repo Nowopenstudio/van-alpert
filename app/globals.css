@@ -18,3 +18,7 @@ body{
 	/* Hide all controls at once */
 	--controls: none;
   }
+
+  mux-player {
+    clip-path: inset(1px 1px);
+}

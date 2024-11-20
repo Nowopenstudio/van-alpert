@@ -9,7 +9,7 @@ export default function PortIndex({projects}:any) {
   
   return (
     
-        <div className="w-full grid grid-cols-12 px-[20px] min-h-[80vh] items-end">
+        <div className="w-full grid grid-cols-12 px-[20px] pt-[40px]">
            <div className="w-full grid grid-cols-12 col-span-full">
                 <IndexSec work={projects.com} title="Commercials"/>
                 <IndexSec work={projects.mus} title="Music Videos"/>

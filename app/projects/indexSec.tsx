@@ -22,7 +22,7 @@ export default function IndexSec({work, title}:any) {
 
   return (
     
-        <div className="col-span-3 row-start">
+        <div className="col-span-12 md:col-span-6 lg:col-span-3 row-start">
           {hover?(
             <div className="previewVid fixed xy-center pointer-events-none z-0 w-[50vw]">
               <Preview playbackId={hover}/>
