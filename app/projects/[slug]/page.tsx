@@ -8,7 +8,7 @@ export default async function ProjectPage({params}:{params:{slug:string}}){
       
       <div>
           <article className="w-full px-[20px] py-[60px] grid grid-cols-12 gap-[20px]" >
-            <div className="col-span-8 col-start-3">
+            <div className="col-span-12 col-start-1 xl:col-span-8 xl:col-start-3">
               {data[0].work?(
 
                 

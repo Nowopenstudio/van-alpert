@@ -22,17 +22,17 @@ export default function IndexSec({work, title}:any) {
 
   return (
     
-        <div className="col-span-12 md:col-span-6 lg:col-span-3 row-start">
+        <div className="col-span-12 mb-[60px] md:mb-0 md:col-span-6 lg:col-span-3 row-start">
           {hover?(
-            <div className="previewVid fixed xy-center pointer-events-none z-0 w-[50vw]">
+            <div className="previewVid fixed xy-center pointer-events-none z-0 w-[100vw] grid grid-cols-12">
               <Preview playbackId={hover}/>
             </div>
           ):('')}
-            <div className="w-full uppercase mb-[60px] relative z-1">{title}</div>
+            <div className="w-full uppercase mb-[40px] md:mb-[60px] relative z-1">{title}</div>
             {work.map((item,i)=>{
                 return(
                  <Link key={`project-${i}`} href={`projects/${item.slug.current}`} onMouseOver={()=>setVid(item.vidCover.asset.playbackId)} onMouseOut={()=>setEnd()}>
-                    <div className="indexSingle w-full mb-[40px] uppercase relative" >
+                    <div className="indexSingle w-full mb-[20px] md:mb-[40px] uppercase relative" >
                       <p>{item.title}</p>
                       <p>{item.artist}</p>
                     </div>
