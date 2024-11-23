@@ -9,16 +9,13 @@ import { TextOn } from "../lib/util/misc";
 
 export default function IndexSec({work, title}:any) {
   const [hover, setHover] = useState(null);
-  console.log(work[0])
   
   
   const setVid=(id)=>{
     setHover(id)
-    console.log(id)
   }
   const setEnd=()=>{
     setHover(null)
-    console.log('out')
   }
 
   return (

@@ -5,7 +5,6 @@ import { TextOn } from '@/app/lib/util/misc';
 
 export default async function ProjectPage({params}:{params:{slug:string}}){
       const {data} = await getData(`*[_type=='projects' && slug.current == '${params.slug}']{title,artist,slug,category->{abbr},"imageUrl": cover.asset->url, work{"thumb":cover.asset->url,video{asset->{playbackId}}}, vidCover{asset->{playbackId}}}`)
-      console.log(data[0])
       return(
       
       <div>

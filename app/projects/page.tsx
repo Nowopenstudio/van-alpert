@@ -10,7 +10,7 @@ export default async function ProjectPage(){
         'shf':*[_type=='projects' && category->{abbr}.abbr=="SHF"]{title, category->{abbr}, artist, slug,vidCover{asset->{playbackId}}},
         'doc':*[_type=='projects' && category->{abbr}.abbr=="DOC"]{title, category->{abbr}, artist, slug,vidCover{asset->{playbackId}}}
         }`)
-        console.log(data)
+
     return(
       
       <div>
