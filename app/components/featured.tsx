@@ -45,7 +45,7 @@ export default function Featured({feat}:any){
   
     return(
         <article className="w-[100vw] relative mx-auto px-[20px] sm:px-[20px] uppercase mt-10">
-           <h1 className="w-full mb-[20px]">Selected Works</h1>
+           <h1 className="w-full mb-[20px] onNorm"><TextOn text={"Selected Works"} num={.6}/></h1>
            <motion.div className="w-full grid grid-cols-12 gap-[20px] items-start pb-[100px]" initial="hidden"
     animate="visible" variants={list}>
                 {feat.map((single,i)=>(
