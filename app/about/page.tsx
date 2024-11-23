@@ -2,6 +2,7 @@ import { getData } from "../lib/util/sanity"
 import { PortableText } from "next-sanity"
 
 
+
 export default async function about({params}:{params:{slug:string}}){
       const {data} = await getData(`*[_type=='info']`)
     return(

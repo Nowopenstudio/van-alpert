@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import { MuxVideoBG } from "../lib/util/muxVideo";
+import { TextOn } from "../lib/util/misc";
 
 const variants = {
     visible: i => ({
@@ -58,12 +59,12 @@ export default function Featured({feat}:any){
                                 </div>
                                 <div className="w-full flex items-start justify-start h-[40px] py-[10px] ">
                                     <div className='w-1/4'>
-                                        <p>{`${single.category.abbr} ${i+1}`}</p>
+                                        <p className="onNorm"><TextOn text={`${single.category.abbr} ${i+1}`} num={(i*.2+.8)}/></p>
         
                                     </div>
                                     <div className="w-3/4 uppercase">
-                                        <p>{single.title}</p>
-                                        <p>{single.artist}</p>
+                                        <p className="onNorm"><TextOn text={single.title} num={(i*.2+.9)}/></p>
+                                        <p className="onNorm"><TextOn text={single.artist} num={(i*.2+1)}/></p>
                                     </div>
                                 </div>
                            </div>

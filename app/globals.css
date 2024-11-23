@@ -22,3 +22,24 @@ body{
   mux-player {
     clip-path: inset(1px 1px);
 }
+
+#toolText{
+    white-space: nowrap;
+}
+.onNorm .toolLetter{
+    opacity:0;
+    animation: typeOn .15s 1 forwards;
+}
+
+@keyframes typeOn {
+    0% {
+      opacity:0;
+    }
+    
+    70% {
+      opacity:0;
+    }
+    100%{
+    opacity:1;
+    }
+  }
