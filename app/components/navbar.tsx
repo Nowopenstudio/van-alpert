@@ -21,7 +21,7 @@ export default function Navbar({ info }){
 
     return(
         <nav className="w-full relative grid px-[20px] uppercase py-5 items-start grid-cols-12">
-            <div className="relative flex items-start col-span-6 col-start-0 z-20">
+            <div className="relative flex items-start col-span-9 sm:col-span-8 col-start-0 z-20">
                 <Link href="/" className="font-nav mr-5"><p className="onNorm"><TextOn text={info.title} num={0}/></p></Link>
                 <p className="font-nav  onNorm"><TextOn text={info.desc} num={.1}/></p>
             </div>
