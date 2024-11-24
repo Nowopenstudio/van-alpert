@@ -19,7 +19,7 @@ export default async function ProjectPage({params}:{params:{slug:string}}){
             </div>
             <div className="items-start uppercase col-span-full relative md:absolute top-0 left-0  py-[60px] md:py-[20px] grid grid-cols-12 md:w-full pointer-events-none">
     
-                                    <div className="co-span-9 md:col-span-3 md:col-start-7">
+                                    <div className="col-span-9 md:col-span-3 md:col-start-7">
                                         <p className="onNorm"><TextOn text={data[0].title} num={.2}/></p>
                                         <p className="onNorm"><TextOn text={data[0].artist} num={.3}/></p>
                                     </div>
