@@ -29,7 +29,7 @@ export default function IndexSec({work, title}:any) {
             <div className="w-full uppercase mb-[40px] md:mb-[60px] relative z-1 onNorm"><TextOn text={title} num={.2}/></div>
             {work.map((item,i)=>{
                 return(
-                 <Link key={`project-${i}`} href={`projects/${item.slug.current}`} onMouseOver={()=>setVid(item.vidCover.asset.playbackId)} onMouseOut={()=>setEnd()}>
+                 <Link key={`project-${i}`} href={`projects/${item.slug?item.slug.current:""}`} onMouseOver={()=>setVid(item.vidCover.asset.playbackId)} onMouseOut={()=>setEnd()}>
                     <div className="indexSingle w-full mb-[20px] md:mb-[40px] uppercase relative">
                       <p className="onNorm"><TextOn text={item.title} num={(i*.1)}/></p>
                       <p className="onNorm"><TextOn text={item.artist} num={(i*.1)+.1}/></p>
