@@ -4,16 +4,16 @@ import { MuxVideo } from '@/app/lib/util/muxVideo';
 import { TextOn } from '@/app/lib/util/misc';
 
 export default async function ProjectPage({params}:{params:{slug:string}}){
-      const {data} = await getData(`*[_type=='projects' && slug.current == '${params.slug}']{title,artist,slug,category->{abbr},"imageUrl": cover.asset->url, work{"thumb":cover.asset->url,video{asset->{playbackId}}}, vidCover{asset->{playbackId}}}`)
+      const {data} = await getData(`*[_type=='projects' && slug.current == '${params.slug}']{title,artist,slug,category->{abbr},"imageUrl": cover.asset->url, work{"thumb":cover.asset->url,"ratio":video.asset->data.aspect_ratio, video{asset->{playbackId}}}, vidCover{asset->{playbackId}}}`)
       return(
       
       <div>
           <article className="w-full px-[20px] py-[60px] grid grid-cols-12 gap-[20px]" >
-            <div className="col-span-12 col-start-1 xl:col-span-8 xl:col-start-3">
+            <div className="col-span-12 col-start-1 xl:col-span-10 xl:col-start-2">
               {data[0].work?(
 
                 
-                   <MuxVideo playbackId={data[0].work.video.asset.playbackId} title={data[0].title}/>
+                   <MuxVideo playbackId={data[0].work.video.asset.playbackId} title={data[0].title} ratio={data[0].work.ratio}/>
               ):('')}
            
             </div>
