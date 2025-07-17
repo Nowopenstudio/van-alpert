@@ -30,3 +30,17 @@ export default async function ProjectPage({params}:{params:{slug:string}}){
 
     )
 }
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const query = await getData(`{
+    'info':*[_type=='info'][0]{title,"about":pt::text(about)},
+    'data':*[_type=='projects' && slug.current == '${params.slug}'][0]{title,artist,slug,category->{abbr},"imageUrl": cover.asset->url, work{"thumb":cover.asset->url,"ratio":video.asset->data.aspect_ratio, video{asset->{playbackId}}}, vidCover{asset->{playbackId}}}
+ }`)
+ const {data, info} = query.data  
+  return {
+    title: `${data.title} - ${data.artist} by Van Alpert`,
+    keywords: 'Music videos, Director, Short Films, Writer, Feature Films, Commercials',
+    description:info.about,
+  };
+}
+
